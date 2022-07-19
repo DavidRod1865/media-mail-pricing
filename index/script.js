@@ -297,7 +297,7 @@ function paypal(){
     if (paypalFee > 0){
         const paypalFeeResult = (paypalFee * .0349) + 0.49;
         const paypalFeeNew = Number(paypalFeeResult.toFixed(2))
-        document.querySelector(".paypalFee1").textContent = paypalFeeNew; 
+        document.querySelector(".paypalFee1").textContent = `$${paypalFeeNew}`; 
         return false;
         } else if (paypalFee <= 0){
             document.querySelector(".paypalFee1").textContent = "$0.00"; 
@@ -310,7 +310,7 @@ function paypal2(){
     if (paypalFee > 0){
         const paypalFeeResult = (paypalFee * .0349) + 0.49;
         const paypalFeeNew = Number(paypalFeeResult.toFixed(2))
-        document.querySelector(".paypalFee2").textContent = paypalFeeNew; 
+        document.querySelector(".paypalFee2").textContent = `$${paypalFeeNew}`; 
         return false;
         } else if (paypalFee <= 0){
             document.querySelector(".paypalFee2").textContent = "$0.00"; 
@@ -318,15 +318,38 @@ function paypal2(){
         }
     }
 
+function bookPrice(){
+    let bookValue = document.getElementById("value").value;
+    bookValue = parseFloat(bookValue).toFixed(2);
+    document.querySelector(".userValue").textContent = `$${bookValue}`;
+    return false;
+    };
+
+function bookPrice2(){
+    let bookValue = document.getElementById("value").value;
+    bookValue = parseFloat(bookValue).toFixed(2);
+    document.querySelector(".userValue2").textContent = `$${bookValue}`;
+    return false;
+};
+
+
+function afterFees(){
+    let bookValue = bookPrice();
+    let shipValue = calShipPay();
+    let payValue = paypal(); 
+    let totalValue = (bookValue - (shipValue + payValue));
+    totalValue = parseFloat(totalValue).toFixed(2);
+    document.querySelector(".userProfit").textContent = `$${totalValue}`;
+    return false;
+};
+
 let calculate = document.querySelector("button").addEventListener('click', () => {
     calShipPay();
     paypal();
     calShipPay2();
     paypal2();
+    bookPrice();
+    bookPrice2();
+    afterFees();
     event.preventDefault();
     });
-
-function afterFees(){
-    let value = document.getElementById("value").value;
-    document.querySelector('.userValue').textContent = value;
-}
