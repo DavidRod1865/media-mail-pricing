@@ -1,4 +1,4 @@
-I built a calculator that will calculate and all-in price for a book that you wish to sell domestically. Based on the information that the user inputs, the user will get a total price including USPS Media Mail shipping fees and PayPal fees if the the user wishes to make a transaction using PayPal's "Goods & Services" service. Note that this only for use to calculate costs for shipping within the Domestic US only.
+I built a calculator that will provide you with an all-in price for a book that you wish to sell domestically. Based on the information that the user inputs, the user will get a total price including USPS Media Mail shipping fees and PayPal fees if the the user wishes to make a transaction using PayPal's "Goods & Services" service. Note that this only for use to calculate costs for shipping within the Domestic US only.
 
 The user will need to input the following values in order for the calculator to work.
 
