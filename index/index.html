@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-In Shipping & Fee Calculator</title>
+</head>
+<body>
+    <header>Media Mail Calculator</header>
+    <content>
+        <form action="" method="get" class="form-values">
+            <div>
+                <label for="value">Enter your value:</label>
+                <input type="text" id="value" name="value" required minlength="1" maxlength="6" size="10" onsubmit="return false">
+            </div>
+            <div>
+                <label for="weight">Enter your weight:</label>
+                <input type="text" id="weight" name="weight" required minlength="1" maxlength="3" size="10" onsubmit="return false">
+            </div>
+            <div>
+                <button class="submit" type="submit">Calculate!</button>
+        </form>
+        <div>
+            <div class="priceOne">
+                <p>If you sell at <strong class="userValue">$0.00</strong>,</p>
+                <p>you will receive <strong class="userProfit">$0.00</strong> after shipping and Paypal Fees.</p>
+                <span>Media Mail Fees: <strong class="shippingFee1">$0.00</strong></span>
+                <span>Paypal Fees: <strong class="paypalFee1">$0.00</strong></span>
+            </div>
+            <div class="priceTwo">
+                <p>If you want to receive <strong class="userValue">$0.00</strong> after shipping and Paypal Fees,</p>
+                <p>you will need to sell at <strong class="userSell">$0.00</strong>.</p>
+                <span>Media Mail Fees: <strong class="shippingFee2">$0.00</strong></span>
+                <span>Paypal Fees: <strong class="paypalFee2">$0.00</strong></span>
+            </div>
+    </content>
+    <script src="../index/script.js"></script>
+</body>
+</html>
