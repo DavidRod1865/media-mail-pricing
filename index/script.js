@@ -186,7 +186,7 @@ function totalAfter(){
     totalValue = parseFloat(totalValue).toFixed(2);
     document.querySelector(".userProfit").textContent = totalValue;
     document.querySelector(".shippingFee1").textContent = ship;
-    document.querySelector(".paypalFee1").textContent = pay;
+    document.querySelector(".paypalFee1").textContent = (Math.round(pay * 100) / 100).toFixed(2);
     return false;
 };
 
@@ -198,7 +198,7 @@ function totalBefore(){
     totalValue = parseFloat(totalValue).toFixed(2);
     document.querySelector(".userSell").textContent = totalValue;
     document.querySelector(".shippingFee2").textContent = ship;
-    document.querySelector(".paypalFee2").textContent = pay;
+    document.querySelector(".paypalFee2").textContent = (Math.round(pay * 100) / 100).toFixed(2);
     return false;
 };
 
