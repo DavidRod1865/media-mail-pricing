@@ -11,34 +11,33 @@
     <header>Media Mail Calculator</header>
     <content>
 
-        <h1>Get the right price, 
-            <br> the first time!</h1>
+        <h1>Ship at the right price.
+            <br> The first time!</h1>
          
          <p class="intro">Know how much a book is worth but don't know how much shipping costs are? How about Paypal Fees? Buying and selling books on non-traditional online market places, such as Reddit, can be very fulfilling.</p>
 
         <form action="" method="get" class="form-values">
-            <div>
-                <input type="text" placeholder="Enter VALUE Here!" id="value" name="value" required minlength="1" maxlength="6" size="10" onsubmit="return false">
-            </div>
-            <div>
-                <input type="text" placeholder="Enter WEIGHT Here!" id="weight" name="weight" required minlength="1" maxlength="3" size="10" onsubmit="return false">
-            </div>
-            <div>
-                <button class="submit" type="submit">Calculate!</button>
+            
+            <input type="text" placeholder="Enter VALUE Here!" id="value" name="value" required minlength="1" maxlength="6" size="10" onsubmit="return false">
+
+            <input type="text" placeholder="Enter WEIGHT Here!" id="weight" name="weight" required minlength="1"maxlength="3" size="10" onsubmit="return false">
+            
+            <button class="submit" type="submit">Calculate!</button>
+        
         </form>
-        <div>
-            <div class="priceOne">
-                <p>If you sell at <strong>$<span class="userValue">0.00</strong></span>,</p>
-                <p>you will receive <strong>$<span class="userProfit">0.00</span></strong> after shipping and Paypal Fees.</p>
-                <span>Media Mail Fees: <strong>$<span class="shippingFee1">0.00</strong></span></span>
-                <span>Paypal Fees: <strong>$<span class="paypalFee1">0.00</strong></span></span>
-            </div>
-            <div class="priceTwo">
-                <p>If you want to receive <strong>$<span class="userValue2">0.00</strong></span> after shipping and Paypal Fees,</p>
-                <p>you will need to sell at <strong>$<span class="userSell">0.00</span></strong>.</p>
-                <span>Media Mail Fees: <strong>$<span class="shippingFee2">0.00</strong></span></span>
-                <span>Paypal Fees: <strong>$<span class="paypalFee2">0.00</strong></span></span>
-            </div>
+
+        <div class="priceOne">
+            <p>If you sell at <strong>$<span class="userValue">0.00</strong></span>, you will receive <strong>$<span class="userProfit">0.00</span></strong> AFTER shipping and Paypal G&S Fee.</p>
+            <span>USPS Media Mail Fee: <strong>$<span class="shippingFee1">0.00</strong></span></span>
+            <span>Paypal G&S Fee: <strong>$<span class="paypalFee1">0.00</strong></span></span>
+        </div>
+
+        <div class="priceTwo">
+            <p>If you want to receive <strong>$<span class="userValue2">0.00</strong></span>, you will need to sell at <strong>$<span class="userSell">0.00</span></strong> which INCLUDES the shipping and Paypal G&S Fee.</p>
+            <span>USPS Media Mail Fee: <strong>$<span class="shippingFee2">0.00</strong></span></span>
+            <span>Paypal G&S Fee: <strong>$<span class="paypalFee2">0.00</strong></span></span>
+        </div>
+
     </content>
     <script src="../index/script.js"></script>
 </body>
