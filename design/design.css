@@ -13,8 +13,29 @@ header {
     color: #E9FFF9;
 }
 
-.form-values {
+content {
     display: flex;
     flex-direction: column;
 }
+
+    h1 {
+        padding: 0 1.25rem;
+    }
+
+    .intro {
+        padding: 0 1.25rem;
+        margin: 0;
+    }
+
+    .form-values {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .form-values div {
+        display: flex;
+        flex-direction: column;
+        padding: .5rem;
+    }
 
