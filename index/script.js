@@ -165,28 +165,29 @@ function paypal2(){
 
 // as July 18th - Paypal Website: https://www.paypal.com/us/webapps/mpp/merchant-fees#fixed-fees-commercialtrans
 
-function bookPrice(){
-    let bookValue = document.getElementById("value").value;
-    document.querySelector(".userValue").textContent = parseFloat(bookValue).toFixed(2);
-    return false;
-    };
+// function bookPrice(){
+//     let bookValue = document.getElementById("value").value;
+//     document.querySelector(".userValue").textContent = parseFloat(bookValue).toFixed(2);
+//     return false;
+//     };
 
     
-function bookPrice2(){
+function bookPrice(){
     let bookValue = +document.getElementById("value").value;
-    document.querySelector(".userValue2").textContent = parseFloat(bookValue).toFixed(2);
-    return false;
+    return parseFloat(bookValue).toFixed(2);
 };
 
 function totalAfter(){
     let bookValue = +document.getElementById("value").value;
     let ship = calShipPay();
     let pay = paypal();
+    let price = bookPrice();
     let totalValue = bookValue - (pay + ship);
     totalValue = parseFloat(totalValue).toFixed(2);
     document.querySelector(".userProfit").textContent = totalValue;
     document.querySelector(".shippingFee1").textContent = ship;
     document.querySelector(".paypalFee1").textContent = (Math.round(pay * 100) / 100).toFixed(2);
+    document.querySelector(".userValue").textContent = price;
     return false;
 };
 
@@ -194,17 +195,18 @@ function totalBefore(){
     let bookValue = +document.getElementById("value").value;
     let ship = calShipPay();
     let pay = paypal2();
+    let price = bookPrice();
     let totalValue = bookValue + (pay + ship);
     totalValue = parseFloat(totalValue).toFixed(2);
     document.querySelector(".userSell").textContent = totalValue;
     document.querySelector(".shippingFee2").textContent = ship;
     document.querySelector(".paypalFee2").textContent = (Math.round(pay * 100) / 100).toFixed(2);
+    document.querySelector(".userValue2").textContent = price;
     return false;
 };
 
 let calculate = document.querySelector("button").addEventListener('click', () => {
     bookPrice();
-    bookPrice2();
     totalAfter();
     totalBefore();
     event.preventDefault();
