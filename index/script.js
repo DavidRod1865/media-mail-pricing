@@ -164,13 +164,6 @@ function paypal2(){
     }
 
 // as July 18th - Paypal Website: https://www.paypal.com/us/webapps/mpp/merchant-fees#fixed-fees-commercialtrans
-
-// function bookPrice(){
-//     let bookValue = document.getElementById("value").value;
-//     document.querySelector(".userValue").textContent = parseFloat(bookValue).toFixed(2);
-//     return false;
-//     };
-
     
 function bookPrice(){
     let bookValue = +document.getElementById("value").value;
