@@ -16,23 +16,25 @@
          
          <p class="intro">Know how much a book is worth but don't know how much shipping costs are? How about Paypal Fees? Buying and selling books on non-traditional online market places, such as Reddit, can be very fulfilling.</p>
 
+         <button class="sellingBook" type="submit">Ship Out Book!</button>
+
         <form action="" method="get" class="form-values">
             
-            <input type="text" placeholder="Enter VALUE Here!" id="value" name="value" required minlength="1" maxlength="6" size="10" onsubmit="return false">
+            <input type="text" placeholder="Enter VALUE Here!" id="value" name="value" required minlength="1" maxlength="6" size="10" onsubmit="return false" hidden>
 
-            <input type="text" placeholder="Enter WEIGHT Here!" id="weight" name="weight" required minlength="1"maxlength="3" size="10" onsubmit="return false">
+            <input type="text" placeholder="Enter WEIGHT Here!" id="weight" name="weight" required minlength="1"maxlength="3" size="10" onsubmit="return false" hidden>
             
-            <button class="submit" type="submit">Calculate!</button>
+            <button class="submitBook" type="submit" hidden>Calculate!</button>
         
         </form>
 
-        <div class="priceOne">
+        <div class="priceOne" hidden>
             <p>If you sell at <strong>$<span class="userValue">0.00</strong></span>, you will receive <strong>$<span class="userProfit">0.00</span></strong> AFTER shipping and Paypal G&S Fee.</p>
             <span>USPS Media Mail Fee: <strong>$<span class="shippingFee1">0.00</strong></span></span>
             <span>Paypal G&S Fee: <strong>$<span class="paypalFee1">0.00</strong></span></span>
         </div>
 
-        <div class="priceTwo">
+        <div class="priceTwo" hidden>
             <p>If you want to receive <strong>$<span class="userValue2">0.00</strong></span>, you will need to sell at <strong>$<span class="userSell">0.00</span></strong> which INCLUDES the shipping and Paypal G&S Fee.</p>
             <span>USPS Media Mail Fee: <strong>$<span class="shippingFee2">0.00</strong></span></span>
             <span>Paypal G&S Fee: <strong>$<span class="paypalFee2">0.00</strong></span></span>

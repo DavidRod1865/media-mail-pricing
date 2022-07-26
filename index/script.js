@@ -1,3 +1,10 @@
+document.querySelector(".sellingBook").addEventListener('click', () => {
+    document.getElementById("value").hidden = false;
+    document.getElementById("weight").hidden = false;
+    document.querySelector(".sellingBook").hidden = true;
+    document.querySelector(".submitBook").hidden = false;
+  }, false);
+
 function calShipPay(){
     let weight = document.getElementById("weight").value;  
         if (weight == 0){
@@ -198,9 +205,10 @@ function totalBefore(){
     return false;
 };
 
-let calculate = document.querySelector("button").addEventListener('click', () => {
+document.querySelector(".submitBook").addEventListener('click', () => {
     bookPrice();
     totalAfter();
     totalBefore();
     event.preventDefault();
     });
+
