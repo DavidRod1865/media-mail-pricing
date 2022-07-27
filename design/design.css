@@ -52,6 +52,15 @@ content {
         flex-direction: column;
         gap: .75rem;
     }
+    
+    .fade { 
+    opacity: 0;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -ms-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+    }
 
         .priceOne {
             background-color: rgba(242, 132, 130, 0.5);
