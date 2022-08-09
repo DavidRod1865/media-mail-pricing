@@ -1,6 +1,5 @@
 function fade() {
     if ($('.fade').css('opacity') == 0) $('.fade').css('opacity', 1);
-    else $('.fade').css('opacity', 0);
     }
 
 function calShipPay(){
