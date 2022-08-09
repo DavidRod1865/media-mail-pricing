@@ -1,17 +1,44 @@
 body {
-    background-color: #E9FFF9;
+    background-color: rgb(233, 255, 249);
     margin: 0;
     display: flex;
     flex-direction: column;
+    height: 125vh;
 }
 
 header {
     background-color: #D64045;
     text-align: center;
     padding: 1rem;
-    font-size:2rem;
     color: #E9FFF9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 25px 0 black;
 }
+
+    header div {
+        display: flex;
+        align-items: center;
+    }
+
+        header div h2 {
+            padding-left: 7px;
+        }
+
+    header img {
+        height: 50px;
+    }
+
+    header * {
+        display: inline;
+    }
+
+    header li a {
+        text-decoration: none;
+        color: rgb(233, 255, 249);
+        padding: .25rem;
+    }
 
 content {
     display: flex;

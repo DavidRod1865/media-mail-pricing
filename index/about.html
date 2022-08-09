@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../design/design.css">
+    <title>All-In Shipping & Transaction Fee Calculator</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="../index/index.html">
+                <img src="../design/output-onlinepngtools.png" alt="logo">
+            </a>
+            <h2>Media Mail Calculator</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index/index.html">Media Price Calculator<a></li>
+                <li><a href="../index/about.html">About<a></li>
+                <li><a href="#">Terms of Use<a></li>
+            </ul>
+        </nav>
+    </header>
+    <content>
+
+        <p>I have sold many books online and one thing I have always struggled with was figuring out how much profit I left after the sale. Calculating the shipping costs and transaction fees can be painstaking task so I built this "calculator" to help book-sellers, like myself, figure out the approximate price for shipping and transactions fees based on the value and weight of the book being sold.</p>
+        
+        <h4>The user will need to input the following values in order for the calculator to work.</h4>
+        
+        <p>1. <strong>Value of the Book or Books</strong> - this is the value of the book being shipped. The value is determined by the user. "BookSwap" does not determine nor influence the value determined by the user.</p>
+        
+        <p>2. <strong>Weight of the Book or Packaged Books</strong> - this is the weight of the total package after packing the books. In order to qualify for Media Mail, the weight cannot exceed 70 lbs per individual package. Note: Media Mail prices are based on the weight of the piece WITHOUT REGARD TO ZONE. Weights must be accurate for an accurate estimate.</p>
+        
+        <p>Based on the information provided, this calculator with provide you with TWO rates. The first rate that you will a provide you with the profit of the sale AFTER expenses. The second rate is an suggested sale price of the book INCLUDING all expenses in order to get the full value of the book.</p> 
+        
+        <form action="" method="get" class="form-values">
+            
+            <h3>Value</h3>
+            <input type="text" placeholder="$200" id="value" name="value" required minlength="1" maxlength="6" size="10" onsubmit="return false" disabled>
+
+            <h3>Weight:</h3>
+            <input type="text" placeholder="20" id="weight" name="weight" required minlength="1"maxlength="3" size="10" onsubmit="return false" disabled>
+            
+            <button class="submitBook" type="submit">Calculate!</button>
+        
+        </form>
+
+        <div class="priceOne">
+            <h2>Profit of the Sale <u>AFTER</u> Expenses!</h2>
+            <p>If you sell at <strong>$<span class="userValue">0.00</strong></span>, you will receive <strong>$<span class="userProfit">0.00</span></strong> AFTER shipping and Paypal G&S Fee.</p>
+            <span>U.S.P.S. Media Mail Shipping Rate is <strong>$<span class="shippingFee1">0.00</strong></span></span>
+            <span>Paypal G&S TransactionFee: <strong>$<span class="paypalFee1">0.00</strong></span></span>
+        </div>
+
+        <div class="priceTwo">
+            <h2>Price to Sell for <u>FULL BOOK VALUE</u></h2>
+            <p>If you want to receive <strong>$<span class="userValue2">0.00</strong></span>, you will need to sell at <strong>$<span class="userSell">0.00</span></strong> which INCLUDES the shipping and Paypal G&S Fee.</p>
+            <span>U.S.P.S. Media Mail Fee: <strong>$<span class="shippingFee2">0.00</strong></span></span>
+            <span>Paypal G&S Fee: <strong>$<span class="paypalFee2">0.00</strong></span></span>
+        </div>
+    </content>
+
+    <footer>
+        <h5>***Note that all rates and fees are approximates and for reference use only and are calculated for sales only within the Domestic US only. The information contained in this website is for general information purposes only.<br><br> 
+        
+        The information is provided by "PayFeeCal" and while we endeavour to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.
+
+        In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.
+            
+        Through this website you are able to link to other websites which are not under the control of "PayFeeCal". We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.
+            
+        Every effort is made to keep the website up and running smoothly. However, "PayFeeCal" takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
+    
+        TRADEMARKS: United States Postal Service, Paypal, and/or other products referenced herein are trademarks of their respective owners.
+    
+        <br><br>TLDR: Please do not sue me.</h5>
+    </footer>
+
+</body>
+</html>
