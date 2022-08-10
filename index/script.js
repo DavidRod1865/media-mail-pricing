@@ -1,11 +1,12 @@
 function fade() {
     if ($('.fade').css('opacity') == 0) $('.fade').css('opacity', 1);
+    else return false;
     }
 
 function calShipPay(){
     let weight = document.getElementById("weight").value;  
         if (weight <= 0){
-            return 0.00;
+            return parseFloat(0.00).toFixed(2);;
         } else if (weight == 1){
             return 3.19;
         } else if (weight == 2){
@@ -181,7 +182,6 @@ function totalAfter(){
     let price = bookPrice();
     let totalValue = bookValue - (pay + ship);
     totalValue = parseFloat(totalValue).toFixed(2);
-    // document.querySelector(".priceOne").style.display = "";
     document.querySelector(".userProfit").textContent = totalValue;
     document.querySelector(".shippingFee1").textContent = ship;
     document.querySelector(".paypalFee1").textContent = (Math.round(pay * 100) / 100).toFixed(2);
@@ -196,7 +196,6 @@ function totalBefore(){
     let price = bookPrice();
     let totalValue = bookValue + (pay + ship);
     totalValue = parseFloat(totalValue).toFixed(2);
-    // document.querySelector(".priceTwo").style.display = "";
     document.querySelector(".userSell").textContent = totalValue;
     document.querySelector(".shippingFee2").textContent = ship;
     document.querySelector(".paypalFee2").textContent = (Math.round(pay * 100) / 100).toFixed(2);
