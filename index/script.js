@@ -1,7 +1,11 @@
-function fade() {
+function appear() {
+    if ($('div').hide()) $('div').show();
+    else return false;
+
+}function fade() {
     if ($('.fade').css('opacity') == 0) $('.fade').css('opacity', 1);
     else return false;
-    }
+}
 
 function calShipPay(){
     let weight = document.getElementById("weight").value;  
@@ -203,11 +207,11 @@ function totalBefore(){
     return false;
 };
 
-
 document.querySelector(".submitBook").addEventListener('click', () => {
     bookPrice();
     totalAfter();
     totalBefore();
+    appear();
     fade();
     event.preventDefault();
     });

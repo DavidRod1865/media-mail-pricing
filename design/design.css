@@ -75,30 +75,36 @@ content {
         margin: .5rem 0;
         padding: .5rem;
         border: 1px solid #1D3354;
-        display: flex;
         flex-direction: column;
         gap: .75rem;
+        color: black;
+        display: flex;
     }
     
-    .fade {
-    opacity: 0;
-    -webkit-transition: all 2s ease-in;
-    -moz-transition: all 2s ease-in;
-    -ms-transition: all 2s ease-in;
-    -o-transition: all 2s ease-in;
-    transition: all 2s ease-in;
-    }
-
         .priceOne {
             background-color: rgba(242, 132, 130, 0.5);
-            color: black;
         }
 
         .priceTwo {
             background-color: rgba(109, 163, 77, 0.5);
-            color: black;
         }
 
-        .priceOne p, .priceTwo p {
-            margin: 0;
-        }
+            .priceOne p, .priceTwo p {
+                margin: 0;
+            }
+            
+            .priceOne h2, .priceTwo h2 {
+                margin: 0;
+            }
+
+    .fade {
+    display: none;
+    opacity: 0;
+    -webkit-transition: all 1.25s ease-in;
+    -moz-transition: all 1.25s ease-in;
+    -ms-transition: all 1.25s ease-in;
+    -o-transition: all 1.25s ease-in;
+    transition: all 1.25s ease-in;
+    }
+
+
