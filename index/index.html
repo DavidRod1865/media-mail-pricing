@@ -31,9 +31,18 @@
 
         <form action="" method="get" class="form-values">
             
-            <input type="text" placeholder="Enter VALUE Here!" id="value" name="value" required minlength="1" maxlength="6" size="10" onsubmit="return false" >
+            <div class="big_container">
+                <div class="container">
+                    <input id="value" class="input" type="text" placeholder="VALUE"  name="value" required minlength="1" maxlength="6" size="10" onsubmit="return false" >
+                    <label class="hidden_label">VALUE</label>
+                </div>
+            
 
-            <input type="text" placeholder="Enter WEIGHT Here!" id="weight" name="weight" required minlength="1"maxlength="3" size="10" onsubmit="return false" >
+                <div class="container">
+                    <input id="weight" class="input" type="text" placeholder="WEIGHT" name="weight" required minlength="1"maxlength="3" size="10" onsubmit="return false" >
+                    <label class="hidden_label">WEIGHT</label>
+                </div>
+            </div>
             
             <button class="submitBook" type="submit">Calculate!</button>
         

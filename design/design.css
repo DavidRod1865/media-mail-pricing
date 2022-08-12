@@ -9,7 +9,7 @@ body {
 header {
     background-color: #D64045;
     text-align: center;
-    padding: 1rem;
+    padding: .5rem 1rem;
     color: #E9FFF9;
     display: flex;
     align-items: center;
@@ -17,28 +17,31 @@ header {
     box-shadow: 0 0 25px 0 black;
 }
 
-    header div {
+    header * {
         display: flex;
-        align-items: center;
+        justify-content: space-between;
     }
 
-        header div h2 {
-            padding-left: 7px;
+        header div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-    header img {
-        height: 50px;
-    }
+            header div h2 {
+                padding-left: 7px;
+            }
 
-    header * {
-        display: inline;
-    }
+            header img {
+                height: 50px;
+            }
 
-    header li a {
-        text-decoration: none;
-        color: rgb(233, 255, 249);
-        padding: .25rem;
-    }
+        header li a {
+            text-decoration: none;
+            color: rgb(233, 255, 249);
+            padding: .25rem;
+            font-weight: 700;
+        }
 
 content {
     display: flex;
@@ -57,19 +60,59 @@ content {
     .form-values {
         display: flex;
         flex-direction: column;
-        padding: 1rem;
-        gap: .75rem;
+        align-items: center;
+        margin: 3rem 3rem 2rem 3rem;
+        gap: 2.75rem;
     }
 
-    .form-values div {
-        display: flex;
-        flex-direction: column;
-        padding: .5rem;
-    }
+        .big_container {
+            display: flex;
+            justify-content: space-between;
+        }
 
-    .form-values input, .form-values button {
-        padding: .5rem;
-    }
+            .container {
+                /*Show the label at desired position when the placeholder of input isn't shown*/
+                position: relative;
+            }
+
+                .input:not(:placeholder-shown) + .hidden_label {
+                        /* background: #ffffff; */
+                        transform: translate(0, -50%);
+                        opacity: 1;
+                }
+            
+                .hidden_label {
+                    /* Position the label */
+                    left: 88px;
+                    position: absolute;
+                    top: 0;
+                    font-size: 36px;
+                
+                    /* Hide it by default */
+                    opacity: 0;
+                    transition: all 200ms;
+                }
+            
+            .container input {
+                margin: 0 5rem;
+                padding: .5rem;
+                width: 300px;
+                height: 60px;
+                font-size: 36px;
+                border: none;
+                border-bottom: 3px black solid;
+            }
+
+                .form-values input:focus {
+                    outline: none;
+                }
+
+        .form-values button {
+            width: 300px;
+            height:60px;
+            font-size: 36px;
+            border-radius: 15px;
+        }
 
     .priceOne, .priceTwo {
         margin: .5rem 0;
