@@ -1,3 +1,4 @@
+// Functions that make pricing appear after click
 function appear() {
     if ($('div').hide()) $('div').show();
     else return false;
@@ -7,6 +8,7 @@ function appear() {
     else return false;
 }
 
+// Function that calculates shipping cost after weight has been entered
 function calShipPay(){
     let weight = document.getElementById("weight").value;  
         if (weight <= 0){
@@ -154,6 +156,7 @@ function calShipPay(){
         }
     };
     
+// Function that calculates paypal fee for after value has been entered. Result used to SUBTRACT paypal fee from value entered.
 function paypal(){
     let paypalFee = +document.getElementById("value").value;  
     if (paypalFee > 0){
@@ -163,6 +166,7 @@ function paypal(){
         }
     }
 
+// Function that calculates second paypal fee after value has been entered. Result used to ADD paypal fee to value entered.
 function paypal2(){
     let paypalFee = +document.getElementById("value").value;  
     if (paypalFee > 0){
@@ -172,13 +176,15 @@ function paypal2(){
         }
     }
 
-// as July 18th - Paypal Website: https://www.paypal.com/us/webapps/mpp/merchant-fees#fixed-fees-commercialtrans
-    
+// paypal fee rate as July 18th - Paypal Website: https://www.paypal.com/us/webapps/mpp/merchant-fees#fixed-fees-commercialtrans
+  
+// Function turns value entered into a NUMBER
 function bookPrice(){
     let bookValue = +document.getElementById("value").value;
     return parseFloat(bookValue).toFixed(2);
 };
 
+// Function calculates total after shipping and paypal fee are EXCLUDED so the user has an approximate profit after fees.
 function totalAfter(){
     let bookValue = +document.getElementById("value").value;
     let ship = calShipPay();
@@ -193,6 +199,7 @@ function totalAfter(){
     return false;
 };
 
+// Function calculates total with shipping and paypal fees INCLUDED so the user has an approximate price that they need to sell the book in order to get the value entered.
 function totalBefore(){
     let bookValue = +document.getElementById("value").value;
     let ship = calShipPay();
@@ -207,6 +214,7 @@ function totalBefore(){
     return false;
 };
 
+// click event which makes it all happen!
 document.querySelector(".submitBook").addEventListener('click', () => {
     bookPrice();
     totalAfter();
