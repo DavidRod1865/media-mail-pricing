@@ -1,26 +1,23 @@
 body {
-    background-color: rgb(233, 255, 249);
     margin: 0;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     flex-direction: column;
-    height: 125vh;
+    min-height: 100vh;
 }
 
 header {
     background-color: #D64045;
     text-align: center;
-    padding: .5rem 1rem;
+    width: 100%;
     color: #E9FFF9;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     box-shadow: 0 0 25px 0 black;
 }
 
-    header * {
-        display: flex;
-        justify-content: space-between;
-    }
 
         header div {
             display: flex;
@@ -29,85 +26,139 @@ header {
         }
 
             header div h2 {
-                padding-left: 7px;
+                padding-left: 10px;
             }
 
             header img {
                 height: 50px;
             }
 
-        header li a {
-            text-decoration: none;
-            color: rgb(233, 255, 249);
-            padding: .25rem;
-            font-weight: 700;
+
+        header ul {
+            list-style: none;
+            padding-inline-start: 0;
         }
+            
+            ul li {
+                display: inline-block;
+                padding: 0 0.5rem;
+                min-width: 6rem;
+                text-align: center;
+                height: 100%;
+            }
+
+            ul li:not(:last-child) {
+                border-right: 2px solid black;
+            }
+
+                header a {
+                    text-decoration: none;
+                    color: rgb(233, 255, 249);
+                    font-weight: 700;
+                }
 
 content {
     display: flex;
     flex-direction: column;
-    padding: 0 1.25rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-    h1 {
-        text-align: center;
-    }
-
-    .intro {
-        margin: 0;
-    }
-
-    .form-values {
+    main {
+        flex: 1;
+        background-color: rgb(233, 255, 249);
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin: 3rem 3rem 2rem 3rem;
-        gap: 2.75rem;
+        min-width: 60%;
+        padding-bottom: 2rem;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
     }
+    
 
-        .big_container {
-            display: flex;
-            justify-content: space-between;
+        .intro {
+            font-size: 1.1rem;
+            margin: 0;
         }
 
-            .container {
-                /*Show the label at desired position when the placeholder of input isn't shown*/
-                position: relative;
+        h2 {
+            text-decoration: underline;
+            margin-bottom: 0.5rem;
+        }
+
+        .instructions {
+            list-style: none;
+            padding-inline-start: 0;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        /* .form-values {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem 3rem 0rem 3rem;
+            gap: 2.75rem; 
+            background-color: #E9FFF9;
+        } */
+
+        main container {
+            flex:1;
+            margin-top: 2rem;
+        }
+
+            .bigContainer {
+                background-color: #E9FFF9;
+                height: 282px;
+                padding-top: 30px;
+                width: 500px;
             }
 
-                .input:not(:placeholder-shown) + .hidden_label {
-                        /* background: #ffffff; */
-                        transform: translate(0, -50%);
-                        opacity: 1;
+                .smallContainer {
+                    /*Show the label at desired position when the placeholder of input isn't shown*/
+                    flex: 1;
+                    position: relative;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 20px;
                 }
-            
-                .hidden_label {
-                    /* Position the label */
-                    left: 88px;
-                    position: absolute;
-                    top: 0;
-                    font-size: 36px;
+
+                    .input:not(:placeholder-shown) + .hidden_label {
+                            /* background: #ffffff; */
+                            transform: translate(0, -50%);
+                            opacity: 1;
+                    }
                 
-                    /* Hide it by default */
-                    opacity: 0;
-                    transition: all 200ms;
+                    .hidden_label {
+                        /* Position the label */
+                        left: 32px;
+                        position: absolute;
+                        top: -42px;
+                        font-size: 36px;
+                    
+                        /* Hide it by default */
+                        opacity: 0;
+                        transition: all 200ms;
+                    }
+                
+                .smallContainer input {
+                    margin: 2rem 0;
+                    padding: 1rem;
+                    width: 300px;
+                    height: 60px;
+                    font-size: 36px;
+                    border: none;
+                    border-bottom: 3px black solid;
                 }
-            
-            .container input {
-                margin: 0 5rem;
-                padding: .5rem;
-                width: 300px;
-                height: 60px;
-                font-size: 36px;
-                border: none;
-                border-bottom: 3px black solid;
-            }
 
-                .form-values input:focus {
-                    outline: none;
-                }
+                    .form-values input:focus {
+                        outline: none;
+                    }
 
-        .form-values button {
+        button {
+            margin: 0 auto;
             width: 300px;
             height:60px;
             font-size: 36px;
@@ -121,9 +172,9 @@ content {
         flex-direction: column;
         gap: .75rem;
         color: black;
-        display: flex;
+        max-width: 700px; 
     }
-    
+
         .priceOne {
             background-color: rgba(242, 132, 130, 0.5);
         }
@@ -135,19 +186,27 @@ content {
             .priceOne p, .priceTwo p {
                 margin: 0;
             }
-            
+
             .priceOne h2, .priceTwo h2 {
                 margin: 0;
             }
 
-    .fade {
-    display: none;
-    opacity: 0;
-    -webkit-transition: all 1.25s ease-in;
-    -moz-transition: all 1.25s ease-in;
-    -ms-transition: all 1.25s ease-in;
-    -o-transition: all 1.25s ease-in;
-    transition: all 1.25s ease-in;
-    }
+        .fade {
+        display: none;
+        opacity: 0;
+        -webkit-transition: all 1.25s ease-in;
+        -moz-transition: all 1.25s ease-in;
+        -ms-transition: all 1.25s ease-in;
+        -o-transition: all 1.25s ease-in;
+        transition: all 1.25s ease-in;
+        }
 
+footer {
+    max-height: auto;
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+    margin-top: auto;
+    background-color: #E9FFF9;
+}
 
