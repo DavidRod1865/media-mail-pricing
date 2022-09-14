@@ -218,6 +218,7 @@ function totalBefore(){
 
 // click event which makes it all happen!
 document.querySelector(".submitBook").addEventListener('click', () => {
+    console.log("Hello I'm Working")
     bookPrice();
     totalAfter();
     totalBefore();
@@ -225,4 +226,5 @@ document.querySelector(".submitBook").addEventListener('click', () => {
     fade();
     event.preventDefault();
     });
+    
 
