@@ -130,6 +130,12 @@ content {
                     padding: 20px;
                 }
 
+                    .smallContainer h2 {
+                        text-decoration: none;
+                        font-size: 2.1rem;
+                        margin: 0;
+                    }
+
                     .input:not(:placeholder-shown) + .hidden_label {
                             transform: translate(0, -50%);
                             opacity: 1;
