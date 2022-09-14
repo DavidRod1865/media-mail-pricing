@@ -57,6 +57,8 @@ function calShipPay(){
             return 15.79;
         } else if (weight == 22){
             return 16.42;
+        } else if (weight == 23){
+            return 17.32;
         } else if (weight == 24){
             return 17.68;
         } else if (weight == 25){
