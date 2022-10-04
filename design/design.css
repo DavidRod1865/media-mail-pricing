@@ -217,10 +217,18 @@ footer {
 }
 
 @media only screen 
-    and (min-device-width: 375px)
+    and (min-device-width: 275px)
     and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 2) {        
-        .intro, .priceOne, .priceTwo {
+        .intro, .priceOne, .priceTwo, .bigContainer {
             width: 80%;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        button {
+            width: 230px;
         }
 }
